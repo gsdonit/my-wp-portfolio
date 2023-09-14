@@ -1,0 +1,43 @@
+// Colors
+
+
+$black:            #1B1B1B;
+$charcoal:         #212121;
+$white:            #ffffff;
+
+$pink: #ECA3B7;
+$yellow: #F8A832;
+$salmon: #FFA9A6;
+
+$background-light: rgba(136, 187, 170, .2);
+$green: #043E44;
+$grey: #919191;
+$dark-grey: #272935;
+$light-green: #88BBAA;
+
+$primary-color: $green;
+
+$light-border: rgba(81, 81, 81, .2);
+$dark-border: #515151;
+
+
+$gold: #cc9751;
+
+
+
+
+
+ // *  Media Query
+ // ================================================= *
+ 
+ $below-max-screen: unquote("screen and (max-width:1799px)");
+ $below-max-width:  unquote("screen and (max-width:1199px)");
+ $below-desktop:    unquote("screen and (max-width:979px)");
+ $below-tablet:     unquote("screen and (max-width:767px)");
+ $below-mini:       unquote("screen and (max-width:639px)");
+ $below-mobile:     unquote("screen and (max-width:480px)");
+ $above-max-width:  unquote("screen and (min-width:1200px)");
+ $above-desktop:    unquote("screen and (min-width:980px)");
+ $above-tablet:     unquote("screen and (min-width:769px)");
+ $above-mini:       unquote("screen and (min-width:640px)");
+ $above-mobile:     unquote("screen and (min-width:480px)");

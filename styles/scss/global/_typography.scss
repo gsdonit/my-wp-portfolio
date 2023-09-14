@@ -1,0 +1,181 @@
+h1, h2, h3, h4, h5, h6, p {
+	margin: 0;
+	
+}
+
+h1, h2, h3, h4, h5, h6 {
+	@include header-font;
+	a {
+		text-decoration: none;
+	}
+}
+
+h1 {
+
+	font-size: 3rem;
+	@include fluid-prop(line-height, 94, 50);
+	font-weight: 500;
+	letter-spacing: -0.022em;
+	padding-bottom: 20px;
+
+	@media #{$below-desktop} {
+		font-size: 2rem;
+	}
+
+}
+h2 {
+	font-size: 2.5rem;
+	@include fluid-prop(line-height, 81, 50);
+	font-weight: 500;
+	padding-bottom: 20px;
+	letter-spacing: -0.022em;
+	padding-bottom: 20px;
+
+	@media #{$below-desktop} {
+		font-size: 2rem;
+	}
+	
+}
+h3 {
+	font-weight: 500;
+	line-height: 42px;
+	letter-spacing: -0.022em;
+	color: $grey;
+	padding-bottom: 20px;
+
+	@media #{$below-desktop} {
+		font-size: 2rem;
+	}
+
+}
+h4 {
+	font-size: 28px;
+	font-weight: 500;	
+	line-height: 29px;
+	letter-spacing: -0.022em;
+}
+h5 {
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 23px;
+	padding-bottom: 20px;
+}
+h6 {
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 23px;
+	letter-spacing: 0.05em;
+	color: $light-green;
+}
+
+
+p {
+	@include paragraph-font;
+	font-size: 18px;
+	color: $black;
+	padding-bottom: 20px;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+}
+
+li {
+	color: $black;
+	@include paragraph-font;
+}
+
+a {
+	text-decoration: none !important;
+	@include paragraph-font;
+}
+
+
+/*
+ |----------------------------------------------------------------
+ |  Link
+ |----------------------------------------------------------------
+ */
+ a {
+ 	transition-duration: 250ms;
+ 	transition-property: background-color, color, border, opacity, text-indent;
+ 	text-decoration: none;
+ 	@include  paragraph-font;
+ 	color: black;
+
+ 	&:hover, &:focus, &:active {
+ 		text-decoration: none;
+ 	}
+
+ 	&:active {
+ 		color: inherit;
+ 	}
+
+ 	p &,
+ 	ul:not([class]) &,
+ 	ol:not([class]) & {
+ 		// border-bottom: 2px solid $light-grey;
+ 		opacity: 1;
+
+ 	}
+ }
+
+ 
+ ul:not([class]),
+ ol:not([class]) {
+ 	margin: 0 0 15px 10px;
+ 	list-style: none;
+ 	padding-left: 25px;
+
+ 	li {
+ 		line-height: 24px;
+ 		position: relative;
+ 		margin-bottom: 10px;
+ 		width: fit-content;
+ 		font-size: 14px;
+ 		font-weight: 500;
+        // @include copy;
+        color: $white;
+
+        @media #{$below-tablet} {
+            // margin: 0 auto 10px auto;
+        }
+
+        &::before {
+           // color:$light-highlight;
+           position: absolute;
+           left: -25px;
+       }
+   }
+
+   ul:not([class]),
+   ol:not([class]) {
+
+   	list-style: none;
+   	padding-left: 25px;
+   }
+}
+
+
+ul:not([class]) {
+
+	li:before {
+		content: "\f111";
+		font-family: "Font Awesome 5 Free";
+		font-weight: bold;
+		color: $white;
+		font-size: 7px;   
+	}
+}
+
+ol:not([class]) {
+	list-style: auto;
+
+	li::marker {
+		color: $gold;
+		font-size: 14px;
+	}
+}

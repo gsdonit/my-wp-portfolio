@@ -1,0 +1,27 @@
+.site-footer-wrapper {
+	background: $black;
+}
+.site-footer {
+	padding: 50px 20px;
+
+	text-align: center;
+
+	.footer-menu {
+		text-align: center;
+
+		p {
+			color: $grey;
+			span {
+				float: right;
+
+				i {
+					font-size: 35px;
+				}
+				
+				a {
+					color: $grey;
+				}
+			}
+		}
+	}
+}

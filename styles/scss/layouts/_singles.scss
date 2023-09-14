@@ -1,0 +1,126 @@
+.single-page-banner	{
+	// background-size: cover;
+	// background-repeat: no-repeat;
+	// max-width: 1600px;
+	background: $black;
+	// margin: 0 auto;
+
+
+	.row {
+		padding: 120px 20px 100px;
+	}
+
+	h1, p {
+		color: $white;
+	}
+
+	.button {
+		margin-top: 20px;
+	}
+} 
+
+
+
+.single-section {
+	// background: $dark-grey;
+}
+
+
+.single-content {
+	#box {
+		overflow: hidden;
+	}
+}
+
+
+.single {
+	header {
+		position: fixed;
+		width: 100%;
+		z-index: 100; 
+		top: 0;
+
+		/* From https://css.glass */
+		background: rgba($black, 0.8);
+		// background: $;black
+		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+		backdrop-filter: blur(6.2px);
+
+		.container-xl {
+			padding-top: 20px;
+			padding-bottom: 20px;
+
+			@media #{$below-desktop} {
+				padding-right: 0;
+				padding-left: 0;
+
+				.row {
+					margin: 0;
+				}
+			}
+		}
+	}
+
+	h3 {
+		color: $black;
+	}
+}
+
+.content-image {
+	padding: 50px 20px;
+
+	h3 {
+		color: $black;
+		padding-bottom: 20px;
+	}
+	img {
+		width: 100%;
+		transform-origin: center center;
+		object-fit: cover;
+		height: 100%;
+		min-height: 340px;
+	}
+
+	ul:not([class]) li:before {
+		color: $gold;
+	}
+
+	ul:not([class]) li, ol:not([class]) li {
+		color: $black;
+	}		
+
+
+	&.right {
+		.row {
+			flex-direction: row-reverse;
+		}
+
+		.content-col {
+			padding: 40px 40px 40px 50px;
+		}
+	}
+
+	.content-col {
+		padding: 40px;
+		h5 {
+			padding-bottom: 20px;
+		}
+	}
+}
+
+
+@media #{$below-desktop} {
+	.content-image {
+		.content-col {
+			padding: 40px 40px 20px;
+		}
+
+		&.right {
+
+
+			.content-col {
+				padding: 40px 40px 20px;
+			}
+		}
+	}
+}

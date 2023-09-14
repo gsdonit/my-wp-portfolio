@@ -1,0 +1,68 @@
+.page-banner {
+	background: $black;
+
+	.row {
+		padding: 145px 20px 100px;
+	}
+	.profile  {
+		text-align: center;
+		color: #641934;
+		img{
+			width: 270px;
+			height: 270px;
+			border-radius: 50%;
+		}
+
+	}
+
+	.biography {
+		h1, p {
+			color: #919191;
+			
+		} 
+	}
+
+	.interests {
+		ul {
+			display: flex;
+			flex-wrap: wrap;
+
+			@media #{$below-mini} {
+				flex-direction: column;
+			}
+
+			li {
+				flex-basis: 50%;
+				max-width: 50%;
+			}
+		}
+	}
+
+	.education {
+		i {
+			color: $gold;
+			margin-right: 10px;
+			font-size: 22px;
+			line-height: 25px;
+		}
+
+		p {
+			padding: 0;
+		}
+		.grad-item {
+			display: flex; 
+			margin-bottom: 10px;
+		}
+
+		.course { 
+			font-size: 16px;
+			color: $white;
+		}
+
+		.school {
+			font-size: 13px;
+		}
+	}
+}
+
+

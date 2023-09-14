@@ -1,0 +1,55 @@
+.home {
+    section {
+        padding: 90px 0;
+
+        @media #{$below-desktop} {
+            padding: 60px 0;
+        }
+    }
+}
+
+.page-banner {
+    .skills {
+        position: relative;
+    }
+
+    .profile {
+        h2  {
+            padding: 20px 0;
+            color: white;
+        } 
+        h5{
+            padding-bottom: 30px;
+            color: white;
+        }
+        @media #{$below-desktop} {
+            padding-bottom: 40px;
+        }
+
+    }
+
+    .interests {
+        @media #{$below-desktop} {
+            padding-bottom: 40px;
+            padding-top: 40px;
+        }
+
+    }
+
+    .social-icons {
+        a {
+            color: $gold;
+            font-size: 32px;
+            margin: 0 5px;
+            transition: all ease-in-out .2s;
+
+            &:hover {
+                color: $grey;
+            }
+        }
+    }
+}
+
+.section-heading {
+    color: $grey;
+}

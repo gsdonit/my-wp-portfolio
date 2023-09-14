@@ -1,0 +1,138 @@
+#testimonial {
+	h1 {
+		margin: 0 auto 50px;
+		width: fit-content;
+		padding: 0 10px;
+		border-radius: 5px;
+		background-size: 300% 300%;
+		color: $black;
+		background-image: linear-gradient(
+			-45deg, 
+			rgba(255,255,255,1) 0%, 
+			rgba(145, 145, 145, 1) 25%, 
+			rgba(255,255,255,1) 51%, 
+			rgba(145, 145, 145, 1) 100%
+			);  
+		animation: AnimateBG 20s ease infinite;
+	}
+
+	@keyframes AnimateBG { 
+		0%{background-position:0% 50%}
+		50%{background-position:100% 50%}
+		100%{background-position:0% 50%}
+	}
+}
+.testimonial-slider {
+	p, h5 {
+		color: $grey;
+	}
+	h5 {
+		font-family:  cursive;
+		font-weight: 500;
+	}	
+	.testimonial-wrapper {
+		display: flex;
+		flex-direction: column;
+	}
+
+
+	.slick-list {
+		height: auto !important;
+	}
+
+	.slick-slide {
+		@media #{$below-mini} {	
+		min-height: 300px;	
+	}
+	@media #{$below-mobile} {	
+		min-height: 600px;	
+	}
+	}
+
+	.slick-arrow {
+		top: 150px;
+		height: 30px;
+		width: 30px;
+		&.slick-prev {
+			right: unset;
+			left: -45px;
+		}
+
+		&.slick-next {
+			right: -45px;
+			left: unset;
+		}
+
+		i {
+			font-size: 14px;
+		}
+	}
+	.slick-list, .slick-track {
+		// min-height: 350px;
+		overflow: visible !important;
+	}
+
+	.slick-slide {
+		opacity: 0;
+	}
+
+	.slick-dots {
+		padding: 0 10px 80px;
+
+
+	}
+
+	.testimonial-wrapper {
+		position: relative;
+		.quote {
+			position: relative;
+			&::before {
+				content: url(../../images/quote.png);   
+				position: absolute;
+				overflow: hidden;
+				z-index: -1;
+				left: -50px;
+				top: -30px;		
+				opacity: .4;
+			}
+		}
+
+		p {
+			position: relative;
+			font-family: "Georgia", serif;
+			font-size: 1.2rem;
+			font-weight: 500;
+			font-style: italic;
+			letter-spacing: 1px;
+		}
+	}
+
+	@media #{$below-desktop} {
+		.slick-arrow {
+			top: unset;
+			bottom: 35px;
+			&.slick-prev {
+				left: 45px;
+			}
+
+			&.slick-next {
+				left: 80px;
+			}
+		}
+		.testimonial-wrapper {
+			padding: 0 30px;
+			.quote {
+				&::before {
+					left: -20px;
+				}
+			}
+		}
+	}
+
+	@media #{$below-desktop} {
+		.slick-dots {
+			padding-top: 10px;
+			padding-bottom: 75px;
+		}
+	}
+}

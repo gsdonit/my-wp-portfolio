@@ -1,0 +1,16 @@
+.button {
+	@include button;
+
+}
+
+
+.primary-btn {
+	background: $gold;
+	border: 1px solid $gold;
+
+	&:hover {
+		background: transparent;
+		color: $gold;	
+	}
+	
+}

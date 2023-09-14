@@ -1,0 +1,211 @@
+.main-logo {
+	a {
+		color: $white;
+		font-size: 20px;
+	}
+}
+
+.desktop-menu {
+	display: flex;
+	@media #{$below-desktop} {
+		display: none;
+	}
+
+	a {		
+		margin: 0 10px;
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 26px;
+		color: $white;
+		transition: all ease-in-out .25s;
+		position: relative;
+
+
+		&::after {
+			content: "";
+			position: absolute;
+			height: 2px;
+			width: 0;
+			bottom: 0;
+			left: 0;
+			background: $gold;
+			transition: all ease-in-out .25s;
+		}
+
+		&:hover {
+			color: $gold;
+
+			&:after {
+				width: 100%;
+			}
+		}		
+	}
+	ul {
+		display: flex;
+	}
+}
+
+@media #{$above-desktop} {
+	.burger {
+		display: none;
+	}
+	.mobile-menu.mobile-active {
+		display: none !important;
+	}
+}
+
+.menu-primary-menu-container {
+	width: 100%;
+}
+
+header {
+	position: fixed;
+	width: 100%;
+	z-index: 100; 
+	top: 0;
+	left: 0;
+	right: 0;
+	background: rgba(145, 145, 145, 0.13);
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(6.2px);
+
+	.container-xl, .menu-container {
+		padding-top: 20px;
+		padding-bottom: 20px;
+
+		@media #{$below-desktop} {
+			padding-right: 0;
+			padding-left: 0;
+
+			.row {
+				margin: 0;
+			}
+		}
+	}
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	padding-right: 40px;
+	padding-left: 40px;
+
+	.menu {
+		display: flex;
+		justify-content: space-evenly;
+
+		li {
+			a {
+				padding: 5px 0;
+				margin: 0 10px;
+				font-weight: 400;
+				font-size: 18px;
+				line-height: 26px;		
+				color: $white;
+				position: relative;
+				transition: all ease-in-out .25s;
+
+				&::after {
+					content: "";
+					position: absolute;
+					height: 2px;
+					width: 0;
+					bottom: 0;
+					left: 0;
+					background: $gold;
+					transition: all ease-in-out .25s;
+				}
+				&.active {
+					color: $gold;
+
+					&::after {
+						width: 100%;
+					}
+				}
+				&:hover {
+					color: $gold;
+
+					&::after {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
+
+.mobile-menu {
+	text-align: center;
+	position: absolute;
+	right: 0;
+	top: 50px;
+	min-width: 100%;
+	z-index: 1000;
+	padding-top: 20px;
+	padding-bottom: 30px;
+	background: #919191;
+	display: none;
+
+	.menu {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	li {
+		margin-bottom: 10px;
+	}
+
+	.menu li a{
+		font-size: 22px;
+		padding: 0
+	}
+
+	a {
+
+		font-weight: 400;
+		font-size: 22px;
+		line-height: 26px;		
+
+		color: $white;
+		border-bottom: 1px solid transparent;
+	}
+
+	
+}
+
+
+
+.burger {
+	cursor: pointer;
+	div {
+		width: 40px;
+		height: 3px;
+		background: $white;
+		border-radius: 3px;
+		margin: 5px;
+		transition: all 0.3s ease;
+		transform: perspective(1px) rotate(0.0000000001deg);
+	}
+
+	.line3 {
+		width: 20px;
+	}
+}
+
+.menu-active {
+
+	.line1 {
+		transform: rotate(-45deg) translate(-5px, 6px);
+	}
+	.line2 {
+		opacity: 0;
+	}
+	.line3 {
+		transform: rotate(45deg) translate(-5px, -6px);
+		width: 40px;
+	}
+}
+
+

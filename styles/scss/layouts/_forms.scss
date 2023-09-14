@@ -1,0 +1,151 @@
+.contact-section {
+	background: $black;
+	.nf-form-fields-required {
+		display: none;
+	}
+
+	.d-flex {
+		flex-direction: column;
+	}
+
+		h2 {
+			color: $grey;
+		
+		}
+		
+	
+	.nf-form-layout {
+		.nf-field-container {
+			margin-bottom: 0;
+		}
+		nf-fields-wrap {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 0fr 1fr 0fr;
+			grid-auto-columns: 1fr;
+			gap: 20px;
+			grid-auto-flow: row;
+			grid-template-areas:
+			"grid-1 grid-2"
+			"grid-3 grid-3"
+			"grid-4 grid-4";
+
+			nf-field {
+				.nf-field-label {
+					margin: 0;
+					padding-bottom: 10px;
+				}
+				label {
+					@include header-font;
+					font-weight: 500;
+					font-size: 16px;
+					letter-spacing: -0.022em;
+					color: $grey;
+				}
+
+				&:nth-child(1) {
+					grid-area: grid-1;
+				}
+				&:nth-child(2) {
+					grid-area: grid-2;
+				}
+				&:nth-child(3) {
+					grid-area: grid-3;
+				}
+				&:nth-child(4) {
+					grid-area: grid-4;
+				}
+			}			
+			@media #{$below-mini} {
+				grid-template-columns: 1fr;
+			}
+
+		}
+
+		input:not([type=button]) {
+			background: transparent !important;
+			border: none;
+			border: 1px solid $grey;
+			border-radius: 5px;
+			padding: 10px;
+
+		}
+
+		.nf-form-content textarea {
+			border: 1px solid $grey;
+			background: transparent;
+			border-radius: 5px;
+		}
+
+	 input[type=submit] {
+			@include header-font;
+			background: $gold !important;
+			width: 180px;
+			height: 60px;
+			border-radius: 5px;
+			text-transform: uppercase;
+			font-weight: 700;
+			font-size: 14px;
+			line-height: 97.46%;
+			letter-spacing: 0.1em;
+			border: 1px solid $gold;			
+
+			&:hover {
+				color: $gold;
+				background: transparent !important;
+			}
+		}
+
+		.nf-error-msg, .ninja-forms-req-symbol {
+			color: $gold;
+		}
+
+		.nf-error .ninja-forms-field {
+			border-color: $gold !important;
+		}
+
+		.nf-error.field-wrap .nf-field-element:after {
+			background: $gold;
+			color: $black;
+		}
+
+	}
+}
+
+
+.country-selector.weglot-dropdown {
+	background-color: $black;
+	color: $white;
+	border-radius: 5px;
+	@include header-font;
+
+	// /wp-content/uploads/2023/09/angle-right-white-.svg
+	.wgcurrent::after {
+		background: url('/wp-content/uploads/2023/09/angle-right-solid-white.svg') !important;
+		transform: unset;
+		background-repeat: no-repeat !important;
+		width: 10px;
+		height: 10px;
+	}
+
+
+	ul {
+		margin: 0;
+	
+	}
+	 
+	li {
+		margin-bottom: 0;
+		&::before {
+			display: none;
+		}
+	}
+}
+
+
+.nf-form-cont {
+	p {
+			color: $grey;
+			@include  paragraph-font;
+	}
+}
